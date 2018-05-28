@@ -8,20 +8,20 @@
 </head>
 <body>
 
-	<form method="POST">
+	<form method="POST" accept-charset="utf-8">
 		<div>
 			<label for="nom">Nom :</label>
-			<input id="nom" name="nom" type="text">
+			<input id="nom" name="nom" type="text" value="<c:out value="${param['nom']}"/>">
 			<span><c:out value="${erreurs['nom']}"/></span>
 		</div>
 		<div>
 			<label for="prenom">Prénom :</label>
-			<input id="prenom" name="prenom" type="text">
+			<input id="prenom" name="prenom" type="text" value="<c:out value="${param['prenom']}"/>">
 			<span><c:out value="${erreurs['prenom']}"/></span>
 		</div>
 		<div>
 			<label for="dateNaissance">Date de Naissance :</label>
-			<input id="dateNaissance" name="dateNaissance" type="date">
+			<input id="dateNaissance" name="dateNaissance" type="date" value="<c:out value="${param['dateNaissance']}"/>">
 			<span><c:out value="${erreurs['dateNaissance']}"/></span>
 		</div>
 		<button type="submit">inscrire</button>

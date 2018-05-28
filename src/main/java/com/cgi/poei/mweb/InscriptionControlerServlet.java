@@ -20,7 +20,7 @@ import com.cgi.poei.mediatheque.exception.InscriptionException;
 public class InscriptionControlerServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("YYYY-MM-dd");
+	private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
 	@EJB
 	private InscripteurUsager inscripteurUsager;
