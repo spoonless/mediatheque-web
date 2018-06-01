@@ -6,6 +6,7 @@ import java.net.URISyntaxException;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -49,6 +50,12 @@ public class UsagerResource {
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	public UsagerProxy getUsager(@PathParam("code") String code) {
 		return new UsagerProxy(inscripteurUsager.getByCode(code));
+	}
+	
+	@DELETE
+	@Path("/{code}")
+	public void supprimerUsager(@PathParam("code") String code) {
+		inscripteurUsager.deleteByCode(code);
 	}
 
 }
